@@ -9,27 +9,27 @@ import Image, {StaticImageData} from "next/image";
 
 const TESTIMONIALS = [
   {
-    text: "“This product has completely transformed how I manage my projects and deadlines”",
-    name: "Sophia Perez",
-    position: "Director, Quantum",
+    text: "En solo 3 días tenía mi tienda online funcionando. Las ventas aumentaron un 40% en el primer mes y ahora puedo atender pedidos incluso fuera de horario. ¡Superó mis expectativas!",
+    name: "María Gonzales",
+    position: "Boutique Moda Lima - Cliente Growth Pack",
     avatarImg: Avatar1,
   },
   {
-    text: "“These AI tools have completely revolutionized our SEO entire strategy overnight”",
-    name: "Tom Cucherosset",
-    position: "Founder, InkGames",
+    text: "El soporte en español y la capacitación fueron fundamentales. No soy experto en tecnología y aun así en una semana ya dominaba mi nueva plataforma. Ahora gestiono todo sin problemas y he ahorrado muchísimo tiempo.",
+    name: "Carlos Mendoza",
+    position: "Servicios Técnicos CMR - Cliente Premium Pack",
     avatarImg: Avatar2,
   },
   {
-    text: "“The user interface is so intuitive and easy to use, it has saved us countless hours”",
-    name: "Sophia Perez",
-    position: "Product Owner, Innovate",
+    text: "El chatbot AI redujo consultas no atendidas en 70%. ¡Invaluable para mi negocio!",
+    name: "Ana Torres",
+    position: "Clínica Dental San Borja - Cliente Premium Pack",
     avatarImg: Avatar3,
   },
   {
-    text: "“Our team's productivity has increased significantly since we started using this tool”",
-    name: "Alec Witthen",
-    position: "CTO, Tech Solutions",
+    text: "IAMA transformó completamente nuestra presencia digital. Pasamos de ser invisibles online a liderar nuestro sector local en menos de un mes.",
+    name: "Roberto Silva",
+    position: "Restaurante Don Roberto - Cliente Growth Pack",
     avatarImg: Avatar4,
   },
 ] satisfies Array<{
@@ -43,9 +43,10 @@ export function Testimonials() {
   return (
     <section className="py-20 md:py-24">
       <div className="container">
-        <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter">Beyond Expectations.</h2>
-        <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto text-center tracking-tight mt-5">Our
-          revolutionary AI SEO tools have transformed our clients&apos; strategies.</p>
+        <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter">Lo Que Dicen Nuestros Clientes</h2>
+        <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto text-center tracking-tight mt-5">
+          Testimonios reales de empresarios peruanos que han transformado sus negocios con IAMA.
+        </p>
         <div className="flex overflow-hidden mt-10 mask-[linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
           <motion.div
             initial={{x: '-50%'}}

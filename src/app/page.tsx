@@ -3,7 +3,8 @@ import {LogoTicker} from "@/components/logo-ticker";
 import {CallToAction} from "@/components/call-to-action";
 import {Features} from "@/components/features";
 import {Testimonials} from "@/components/testimonials";
-import SiteFooter from "@/components/site-footer";
+import {WorkProcess} from "@/components/work-process";
+import {FAQServices} from "@/components/faq-services";
 import SiteHeader from "@/components/site-header";
 
 export default function Home() {
@@ -13,9 +14,10 @@ export default function Home() {
       <HeroSection/>
       <LogoTicker/>
       <Features/>
+      <WorkProcess/>
       <Testimonials/>
+      <FAQServices/>
       <CallToAction/>
-      <SiteFooter />
     </>
   );
 }

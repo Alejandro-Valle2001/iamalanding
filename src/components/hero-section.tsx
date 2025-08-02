@@ -31,9 +31,12 @@ export function HeroSection() {
     >
       <div
         className="absolute inset-0 bg-[radial-gradient(75%_75%_at_center_center,rgb(140,69,255,0.5)_15%,rgb(14,0,36,0.5)_78%,transparent)]"/>
-      {/* Planet Logic */}
-      <div
-        className="absolute size-64 md:size-96 bg-purple-500 rounded-full border border-white/20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(50%_50%_at_16.8%_18.3%,white,rgb(184,148,255)_37.7%,rgb(24,0,66))] shadow-[-20px_-20px_50px_rgb(255,255,255,0.5),-20px_-20px_80px_rgb(255,255,255,0.1),0_0_50px_rgb(140,69,255)]"/>
+      {/* Llama Astronauta */}
+      <img 
+        src="/llamaastro.png" 
+        alt="Llama Astronauta" 
+        className="absolute size-64 md:size-96 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain z-10"
+      />
       {/* Rings + Mini planets Logic */}
       <motion.div
         animate={{rotate: "1turn"}}
@@ -63,15 +66,18 @@ export function HeroSection() {
       {/* Hero Section Content Logic */}
       <div className="container relative mt-16">
         <h1
-          className="text-8xl md:text-[168px] md:leading-none font-semibold bg-white tracking-tighter bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,0.5))] bg-clip-text text-transparent text-center">
-          AI SEO
+          className="text-8xl md:text-[168px] md:leading-none font-semibold bg-white tracking-tighter bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,0.5))] bg-clip-text text-transparent text-center relative z-0 -mt-12 md:-mt-20">
+          IAMA
         </h1>
-        <p className="text-lg md:text-xl max-w-xl mx-auto text-white/70 mt-5 text-center">
-          Elevate your site&apos;s visibility effortlessly with AI, where
-          smart technology meets user-friendly SEO tools.
-        </p>
-        <div className="flex justify-center mt-5">
-          <ActionButton label="Join Waitlist"/>
+        <div className="max-w-4xl mx-auto mt-36 md:mt-44 relative z-20">
+          <h2 className="text-2xl md:text-3xl font-semibold text-white text-center mb-4">
+            Transformación Digital con IA
+          </h2>
+          <p className="text-lg md:text-xl text-white/90 text-center font-medium mb-6">
+          Llevamos tu negocio al mundo digital en menos de 8 días para que incrementes tus ventas desde el primer día y escales tu empresa.          </p>
+        </div>
+        <div className="flex justify-center mt-8 relative z-20">
+          <ActionButton label="Consulta Gratuita"/>
         </div>
       </div>
     </motion.section>

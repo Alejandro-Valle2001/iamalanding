@@ -6,6 +6,7 @@ import {Drawer, DrawerContent, DrawerTrigger} from "@/components/ui/drawer";
 import {ActionButton} from "@/components/action-button";
 import {Icons} from "@/components/icons";
 import {useState} from "react";
+import Image from "next/image";
 
 export default function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false)
@@ -15,48 +16,60 @@ export default function SiteHeader() {
         <div
           className="flex items-center justify-between md:border md:p-2.5 md:rounded-xl max-w-2xl mx-auto md:backdrop-blur-sm ">
           <Link href="/">
-            <div className="border size-10 rounded-lg inline-flex items-center justify-center">
-              <Icons.logo className="size-8"/>
+            <div className="border size-10 rounded-lg inline-flex items-center justify-center overflow-hidden">
+              <Image 
+                src="/logoiama.png" 
+                alt="IAMA Logo" 
+                width={32} 
+                height={32}
+                className="object-contain"
+              />
             </div>
           </Link>
           <section className="max-md:hidden">
             <nav className="flex gap-8 items-center text-sm">
-              <Link href="#" className="text-white/70 hover:text-white transition">Features</Link>
-              <Link href="#" className="text-white/70 hover:text-white transition">Developers</Link>
-              <Link href="#" className="text-white/70 hover:text-white transition">Pricing</Link>
-              <Link href="#" className="text-white/70 hover:text-white transition">Changelog</Link>
+              <Link href="#estadisticas" className="text-white/70 hover:text-white transition">Características</Link>
+              <Link href="#paquetes" className="text-white/70 hover:text-white transition">Planes</Link>
+              <Link href="#proceso" className="text-white/70 hover:text-white transition">Proceso</Link>
+              <Link href="#ventajas" className="text-white/70 hover:text-white transition">Ventajas</Link>
             </nav>
           </section>
           <section className="flex max-md:gap-4 items-center">
-            <ActionButton label="Join Waitlist"/>
+            <ActionButton label="Consulta Gratuita"/>
             <Drawer open={isOpen} onOpenChange={setIsOpen}>
               <DrawerTrigger>
                 <MenuIcon className="size-9 md:hidden hover:text-white/70 transition"/>
               </DrawerTrigger>
               <DrawerContent className="p-8">
                 <div className="inline-flex items-center center gap-3 mt-8">
-                  <div className="border size-8 rounded-lg inline-flex items-center justify-center">
-                    <Icons.logo className="size-6 h-auto"/>
+                  <div className="border size-8 rounded-lg inline-flex items-center justify-center overflow-hidden">
+                    <Image 
+                      src="/logoiama.png" 
+                      alt="IAMA Logo" 
+                      width={24} 
+                      height={24}
+                      className="object-contain"
+                    />
                   </div>
-                  <p className="font-bold">AI Startup Landing Page</p>
+                  <p className="font-bold">IAMA</p>
                 </div>
                 <div className="mt-8 mb-4">
                   <nav className="grid gap-4 items-center text-lg">
-                    <Link href="#" className="flex items-center gap-3 text-white/70 hover:text-white transition">
+                    <Link href="#estadisticas" className="flex items-center gap-3 text-white/70 hover:text-white transition" onClick={() => setIsOpen(false)}>
                       <Feather className="size-6"/>
-                      Features
+                      Características
                     </Link>
-                    <Link href="#" className="flex items-center gap-3 text-white/70 hover:text-white transition">
+                    <Link href="#paquetes" className="flex items-center gap-3 text-white/70 hover:text-white transition" onClick={() => setIsOpen(false)}>
                       <CodeXml className="size-6"/>
-                      Developers
+                      Planes
                     </Link>
-                    <Link href="#" className="flex items-center gap-3 text-white/70 hover:text-white transition">
+                    <Link href="#proceso" className="flex items-center gap-3 text-white/70 hover:text-white transition" onClick={() => setIsOpen(false)}>
                       <Wallet2 className="size-6"/>
-                      Pricing
+                      Proceso
                     </Link>
-                    <Link href="#" className="flex items-center gap-3 text-white/70 hover:text-white transition">
+                    <Link href="#ventajas" className="flex items-center gap-3 text-white/70 hover:text-white transition" onClick={() => setIsOpen(false)}>
                       <Newspaper className="size-6"/>
-                      Changelog
+                      Ventajas
                     </Link>
                   </nav>
                 </div>
