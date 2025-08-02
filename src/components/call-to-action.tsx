@@ -183,7 +183,7 @@ export function CallToAction() {
               {/* Mensaje final con garantías */}
               <div className="text-center p-6 border border-[#8c44ff] rounded-xl bg-[linear-gradient(to_bottom_left,rgb(140,69,255,0.2),black)]">
                 <div className="text-2xl font-bold text-white mb-2">
-                  "Transformamos tu negocio con tecnología hecha en Perú, para peruanos"
+                  &ldquo;Transformamos tu negocio con tecnología hecha en Perú, para peruanos&rdquo;
                 </div>
                 <div className="text-white/60 text-sm mt-4">
                   © 2025 IAMA - Lima, Perú | Diseñado con ❤️ para potenciar PYMEs peruanos

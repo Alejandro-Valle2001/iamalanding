@@ -4,7 +4,7 @@ import Link from "next/link";
 import {CodeXml, Feather, MenuIcon, Newspaper, Wallet2} from "lucide-react";
 import {Drawer, DrawerContent, DrawerTrigger} from "@/components/ui/drawer";
 import {ActionButton} from "@/components/action-button";
-import {Icons} from "@/components/icons";
+
 import {useState} from "react";
 import Image from "next/image";
 

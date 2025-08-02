@@ -4,6 +4,7 @@ import BackgroundStars from "@/assets/stars.png";
 import {motion, useScroll, useTransform} from "motion/react";
 import {useRef} from "react";
 import {ActionButton} from "./action-button";
+import Image from "next/image";
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -32,9 +33,11 @@ export function HeroSection() {
       <div
         className="absolute inset-0 bg-[radial-gradient(75%_75%_at_center_center,rgb(140,69,255,0.5)_15%,rgb(14,0,36,0.5)_78%,transparent)]"/>
       {/* Llama Astronauta */}
-      <img 
+      <Image 
         src="/llamaastro.png" 
         alt="Llama Astronauta" 
+        width={384}
+        height={384}
         className="absolute size-64 md:size-96 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain z-10"
       />
       {/* Rings + Mini planets Logic */}
