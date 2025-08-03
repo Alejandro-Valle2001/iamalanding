@@ -164,8 +164,8 @@ export function Features() {
   const backgroundPositionY = useMotionValue(stats[0].backgroundPositionY);
   const backgroundSizeX = useMotionValue(stats[0].backgroundSizeX);
 
-  const backgroundPosition = useMotionTemplate`${backgroundPositionX}% ${backgroundPositionY}%`;
-  const backgroundSize = useMotionTemplate`${backgroundSizeX}% auto`;
+  // const backgroundPosition = useMotionTemplate`${backgroundPositionX}% ${backgroundPositionY}%`;
+  // const backgroundSize = useMotionTemplate`${backgroundSizeX}% auto`;
 
   const handleSelectTab = (index: number) => {
     setSelectedTab(index);

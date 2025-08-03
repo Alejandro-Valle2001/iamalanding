@@ -1,14 +1,14 @@
 "use client"
 
-import AcmeLogo from "@/assets/brands/acme-corp-logo.svg"
-import EchoValleyLogo from "@/assets/brands/echo-valley-logo.svg"
-import QuantumLogo from "@/assets/brands/quantum-logo.svg"
-import PulseLogo from "@/assets/brands/pulse-logo.svg"
-import OutsideLogo from "@/assets/brands/outside-logo.svg"
-import CelestialLogo from "@/assets/brands/celestial-logo.svg"
-import TwiceLogo from "@/assets/brands/twice-logo.svg"
-import Image from "next/image";
-import {motion} from "motion/react";
+// import AcmeLogo from "@/assets/brands/acme-corp-logo.svg"
+// import EchoValleyLogo from "@/assets/brands/echo-valley-logo.svg"
+// import QuantumLogo from "@/assets/brands/quantum-logo.svg"
+// import PulseLogo from "@/assets/brands/pulse-logo.svg"
+// import OutsideLogo from "@/assets/brands/outside-logo.svg"
+// import CelestialLogo from "@/assets/brands/celestial-logo.svg"
+// import TwiceLogo from "@/assets/brands/twice-logo.svg"
+// import Image from "next/image";
+// import {motion} from "motion/react";
 
 // export function LogoTicker() {
 //   const COMPANIES = [
