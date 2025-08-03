@@ -8,62 +8,62 @@ const processSteps = [
     step: "01",
     title: "Descubrimiento",
     duration: "30 minutos",
-    description: "Empezamos con un diálogo sencillo. Te pediremos completar un breve cuestionario y nos reuniremos para entender tus objetivos de negocio, público objetivo y puntos de dolor actuales.",
+    description: "Comenzamos con una llamada de 30 minutos donde analizamos tu negocio actual. Completarás un cuestionario estratégico para identificar oportunidades de crecimiento y definir objetivos claros y medibles.",
     icon: Icons.click
   },
   {
     step: "02", 
     title: "Desarrollo",
-    duration: "1-3 días",
-    description: "Nuestro equipo IAMA diseña y construye tu solución digital empleando nuestra plataforma de IA que automatiza el 90% del desarrollo. En 24-72 horas tendrás un primer prototipo funcional.",
+    duration: "2 a 7 días",
+    description: "Nuestro equipo especializado diseña y construye tu solución digital usando IA avanzada que automatiza el 100% del proceso. Tendrás un prototipo funcional listo para probar en un par de días.",
     icon: Icons.gauge
   },
   {
     step: "03",
     title: "Lanzamiento y Entrenamiento", 
     duration: "1 día",
-    description: "Implementamos la solución en producción y te asistimos en el lanzamiento oficial. Incluimos una sesión de capacitación personalizada de 30 minutos vía videollamada.",
+    description: "Ponemos tu solución en vivo y te acompañamos en cada detalle del lanzamiento. Recibes capacitación personalizada de 30 minutos para que domines todas las funciones desde el primer día.",
     icon: Icons.stars
   },
   {
     step: "04",
     title: "Soporte Continuo",
     duration: "Ilimitado", 
-    description: "Brindamos soporte dedicado 24/7 para resolver cualquier duda. Monitoreamos tus sistemas en tiempo real y realizamos revisiones trimestrales de estrategia contigo.",
+    description: "Soporte dedicado 24/7 para que nunca te quedes solo. Monitoreamos tu rendimiento en tiempo real y realizamos revisiones estratégicas para optimizar constantemente tus resultados.",
     icon: Icons.gauge
   }
 ];
 
 const comparisons = [
   {
-    aspect: "Velocidad de Entrega",
-    traditional: "4-8 semanas por proyecto",
-    iama: "1-8 días – Soluciones rápidas"
+    aspect: "Velocidad",
+    traditional: "4 a 8 semanas por proyecto",
+    iama: "Listo en máximo 8 días"
   },
   {
-    aspect: "Costo Inicial", 
-    traditional: "aproximadamente S/ 5,000+ solo el sitio web",
-    iama: "Desde S/ 550 todo incluido"
+    aspect: "Inversión", 
+    traditional: "Mínimo S/ 5,000 solo por el sitio web",
+    iama: "Solo S/ 550 por la solución completa"
   },
   {
     aspect: "Tecnología",
     traditional: "Desarrollo manual propenso a errores",
-    iama: "Plataforma IA propia con precisión y rapidez"
+    iama: "Inteligencia Artificial que automatiza 100% del proceso"
   },
   {
-    aspect: "Enfoque Local",
-    traditional: "Plantillas genéricas globales", 
-    iama: "Soluciones Perú-specific adaptadas a mercado local"
+    aspect: "Enfoque",
+    traditional: "Plantillas globales genéricas", 
+    iama: "Diseñado específicamente para el mercado peruano"
   },
   {
-    aspect: "Soporte & Mantenimiento",
-    traditional: "Costos extra por soporte limitado",
-    iama: "Soporte 24/7 incluido, mantenimiento continuo"
+    aspect: "Soporte",
+    traditional: "Te cobran extra por cada modificación",
+    iama: "Soporte garantizado 24/7"
   },
   {
     aspect: "Personalización",
-    traditional: "Plantillas genéricas",
-    iama: "Soluciones para peruanos"
+    traditional: "Soluciones rígidas que no se adaptan",
+    iama: "Completamente flexible según tu negocio"
   }
 ];
 
@@ -74,10 +74,10 @@ export function WorkProcess() {
         {/* Proceso de Trabajo */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter mb-6">
-            Proceso de Trabajo Sin Complicaciones
+            Tu transformación digital en 4 pasos
           </h2>
           <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto text-center tracking-tight">
-            Nuestro proceso optimizado garantiza resultados rápidos sin la complejidad de las agencias tradicionales.
+            Metodología probada que entrega resultados en días, no meses. Sin reuniones interminables ni complicaciones innecesarias.
           </p>
         </div>
 
@@ -133,28 +133,28 @@ export function WorkProcess() {
         <div className="mt-20" id="ventajas">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-medium text-center tracking-tighter mb-6">
-              Por Qué Elegir IAMA
+              IAMA vs. Agencias tradicionales
             </h2>
             <p className="text-white/70 text-lg max-w-2xl mx-auto text-center tracking-tight">
-              Más rápido, más económico y más efectivo que las agencias tradicionales.
+              La nueva generación de servicios digitales: resultados más rápidos a una fracción del costo.
             </p>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse border border-muted rounded-xl overflow-hidden">
+          <div className="overflow-x-auto max-w-4xl mx-auto">
+            <table className="w-full border-collapse border border-muted rounded-xl overflow-hidden table-fixed">
               <thead>
                 <tr className="bg-[linear-gradient(to_bottom_left,rgb(140,69,255,0.2),black)]">
-                  <th className="text-left p-4 border-b border-muted text-white font-semibold">Aspecto</th>
-                  <th className="text-left p-4 border-b border-muted text-white font-semibold">Agencias Tradicionales</th>
-                  <th className="text-left p-4 border-b border-muted text-[#8c44ff] font-semibold">IAMA</th>
+                  <th className="text-left p-3 border-b border-muted text-white font-semibold text-sm w-1/5">Aspecto</th>
+                  <th className="text-left p-3 border-b border-muted text-[#8c44ff] font-semibold text-sm w-2/5">IAMA</th>
+                  <th className="text-left p-3 border-b border-muted text-white font-semibold text-sm w-2/5">Agencias tradicionales</th>
                 </tr>
               </thead>
               <tbody>
                 {comparisons.map((comparison, index) => (
                   <tr key={index} className="border-b border-muted last:border-b-0">
-                    <td className="p-4 text-white font-medium">{comparison.aspect}</td>
-                    <td className="p-4 text-white/60 text-sm">{comparison.traditional}</td>
-                    <td className="p-4 text-white text-sm font-medium">{comparison.iama}</td>
+                    <td className="p-3 text-white font-medium text-sm">{comparison.aspect}</td>
+                    <td className="p-3 text-white text-xs font-medium">{comparison.iama}</td>
+                    <td className="p-3 text-white/60 text-xs">{comparison.traditional}</td>
                   </tr>
                 ))}
               </tbody>

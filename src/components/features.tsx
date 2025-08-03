@@ -1,6 +1,6 @@
 "use client";
 
-import ProductImage from "@/assets/product-image.png";
+// import ProductImage from "@/assets/product-image.png";
 import {animate, motion, useMotionTemplate, useMotionValue, ValueAnimationTransition,} from "motion/react";
 import {ComponentPropsWithoutRef, useEffect, useRef, useState} from "react";
 import {Icons} from "@/components/icons";
@@ -8,8 +8,7 @@ import {Icons} from "@/components/icons";
 const stats = [
   {
     icon: Icons.click,
-    title: "Tiempo de Entrega: 1-8 días",
-    subtitle: "vs 4-8 semanas en agencias tradicionales",
+    title: "Tiempo de entrega de 2 a 8 días",
     isNew: false,
     backgroundPositionX: 0,
     backgroundPositionY: 0,
@@ -17,8 +16,7 @@ const stats = [
   },
   {
     icon: Icons.gauge,
-    title: "Desde S/ 550 inversión inicial",
-    subtitle: "vs S/ 5,000+ que cobran otras agencias",
+    title: "Inversión única desde S/ 550",
     isNew: false,
     backgroundPositionX: 98,
     backgroundPositionY: 100,
@@ -26,9 +24,8 @@ const stats = [
   },
   {
     icon: Icons.stars,
-    title: "30-40% incremento en ventas",
-    subtitle: "promedio observado en el primer mes",
-    isNew: true,
+    title: "30-40% de incremento en ventas",
+    isNew: false,
     backgroundPositionX: 100,
     backgroundPositionY: 27,
     backgroundSizeX: 177,
@@ -37,30 +34,12 @@ const stats = [
 
 const packages = [
   {
-    name: "STARTER PACK",
-    subtitle: "Negocios sin Presencia Digital",
-    price: "S/ 550",
-    monthly: "S/ 185/mes",
-    ideal: "60% de PYMEs peruanas",
-    benefits: [
-      "Hasta 30% más conversión de ventas",
-      "70% menos oportunidades perdidas",
-      "80% más clientes nuevos en 30 días"
-    ],
-    services: [
-      "Sitio web básico hasta 5 páginas",
-      "Google Business Profile",
-      "Configuración SEO básica",
-      "Integración WhatsApp Business",
-      "Rebranding redes sociales"
-    ]
-  },
-  {
     name: "GROWTH PACK",
     subtitle: "Presencia Digital Básica",
     price: "S/ 1,295",
     monthly: "S/ 555/mes",
     ideal: "30% de PYMEs peruanas",
+    isRecommended: false,
     benefits: [
       "50% más engagement en línea",
       "40% más leads calificados",
@@ -75,11 +54,32 @@ const packages = [
     ]
   },
   {
+    name: "STARTER PACK",
+    subtitle: "Negocios sin Presencia Digital",
+    price: "S/ 550",
+    monthly: "S/ 180/mes",
+    ideal: "60% de PYMEs peruanas",
+    isRecommended: true,
+    benefits: [
+      "Hasta 30% más conversión de ventas",
+      "70% menos oportunidades perdidas",
+      "80% más clientes nuevos en 30 días"
+    ],
+    services: [
+      "Sitio web básico hasta 5 páginas",
+      "Google Business Profile",
+      "Configuración SEO básica",
+      "Integración WhatsApp Business",
+      "Rebranding redes sociales"
+    ]
+  },
+  {
     name: "PREMIUM PACK",
     subtitle: "Liderar Su Sector",
     price: "S/ 1,850",
     monthly: "S/ 1,110/mes",
     ideal: "10% de PYMEs peruanas",
+    isRecommended: false,
     benefits: [
       "80% más ventas online",
       "60% mejora en retención",
@@ -106,7 +106,7 @@ const FeatureTab = (props: FeatureTabProps) => {
   const maskImage = useMotionTemplate`radial-gradient(80px 80px at ${xPercentage}% ${yPercentage}%, black, transparent)`;
 
   useEffect(() => {
-    if (!tabRef.current || !props.selected) return;
+    if (!tabRef.current) return;
 
     xPercentage.set(0);
     yPercentage.set(0);
@@ -130,7 +130,7 @@ const FeatureTab = (props: FeatureTabProps) => {
 
     animate(xPercentage, [0, 100, 100, 0, 0], options);
     animate(yPercentage, [0, 0, 100, 100, 0], options);
-  }, [props.selected, xPercentage, yPercentage]);
+  }, [xPercentage, yPercentage]);
 
   return (
     <div
@@ -138,18 +138,15 @@ const FeatureTab = (props: FeatureTabProps) => {
       ref={tabRef}
       onClick={props.onClick}
     >
-      {props.selected && (
-        <motion.div
-          style={{maskImage}}
-          className="absolute inset-0 -m-px border border-[#A369FF] rounded-xl"
-        />
-      )}
+      <motion.div
+        style={{maskImage}}
+        className="absolute inset-0 -m-px border border-[#A369FF] rounded-xl"
+      />
       <div className="size-12 border border-muted rounded-lg inline-flex items-center justify-center">
         <props.icon className="size-5"/>
       </div>
       <div className="flex-1">
-        <div className="font-medium text-sm">{props.title}</div>
-        <div className="text-xs text-white/60 mt-1">{props.subtitle}</div>
+        <div className="font-medium text-sm text-center">{props.title}</div>
       </div>
       {props.isNew && (
         <div className="text-xs rounded-full text-white px-2 py-0.5 bg-[#8c44ff] font-semibold">
@@ -198,10 +195,10 @@ export function Features() {
     <section className="py-20 md:py-24" id="estadisticas">
       <div className="container">
         <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter">
-          Estadísticas Clave Que Nos Respaldan
+          Ventajas que marcan la diferencia
         </h2>
         <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto text-center tracking-tight mt-5">
-          Resultados comprobados que demuestran por qué las empresas peruanas eligen IAMA para su transformación digital.
+        Lo que hace único a IAMA en el mercado peruano.
         </p>
         <div className="mt-10 grid lg:grid-cols-3 gap-3">
           {stats.map((stat, index) => (
@@ -217,19 +214,19 @@ export function Features() {
         {/* Estadísticas adicionales */}
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           <div className="text-center p-6 border border-muted rounded-xl bg-[linear-gradient(to_bottom_left,rgb(140,69,255,0.05),black)]">
-            <div className="text-3xl font-bold text-[#8c44ff] mb-2">80%</div>
-            <div className="text-sm text-white/70">Reducción en tiempo de desarrollo</div>
+            <div className="text-5xl font-bold text-[#8c44ff] mb-2">80%</div>
+            <div className="text-3sm text-white/70">Menos tiempo de desarrollo</div>
           </div>
           <div className="text-center p-6 border border-muted rounded-xl bg-[linear-gradient(to_bottom_left,rgb(140,69,255,0.05),black)]">
-            <div className="text-3xl font-bold text-[#8c44ff] mb-2">90%</div>
-            <div className="text-sm text-white/70">Automatización del proceso</div>
+            <div className="text-5xl font-bold text-[#8c44ff] mb-2">100%</div>
+            <div className="text-3sm text-white/70">Del proceso automatizado</div>
           </div>
           <div className="text-center p-6 border border-muted rounded-xl bg-[linear-gradient(to_bottom_left,rgb(140,69,255,0.05),black)]">
-            <div className="text-3xl font-bold text-[#8c44ff] mb-2">70%</div>
-            <div className="text-sm text-white/70">Reducción de leads perdidos</div>
+            <div className="text-5xl font-bold text-[#8c44ff] mb-2">40%</div>
+            <div className="text-3sm text-white/70">Menos ventas perdidas</div>
           </div>
         </div>
-        <motion.div className="border border-muted rounded-xl p-2.5 mt-3">
+        {/* <motion.div className="border border-muted rounded-xl p-2.5 mt-3">
           <div className="aspect-video bg-cover border border-muted rounded-lg"
             style={{
               backgroundPosition: backgroundPosition.get(),
@@ -237,52 +234,74 @@ export function Features() {
               backgroundImage: `url(${ProductImage.src})`,
             }}
           ></div>
-        </motion.div>
+        </motion.div> */}
         
         {/* Paquetes de Servicios */}
         <div className="mt-20" id="paquetes">
           <h2 className="text-4xl md:text-5xl font-medium text-center tracking-tighter mb-6">
-            Paquetes de Servicios & Impacto Medible
+            Paquetes de Servicios
           </h2>
-          <p className="text-white/70 text-lg max-w-3xl mx-auto text-center tracking-tight mb-12">
-            Soluciones personalizadas para cada etapa de tu transformación digital. Cada paquete incluye implementación rápida, soporte continuo y mejoras mensurables desde el primer día.
+          <p className="text-white/70 text-lg max-w-3xl mx-auto text-center tracking-tight mb-20">
+          Transforma tu negocio con el plan ideal para ti. Implementación en días, no meses. Soporte continuo y resultados que puedes medir desde la primera semana.
           </p>
-          <div className="grid lg:grid-cols-3 gap-6">
-            {packages.map((pkg, index) => (
-              <div key={index} className="border border-muted rounded-xl p-6 bg-[linear-gradient(to_bottom_left,rgb(140,69,255,0.1),black)] h-full">
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-white mb-2">{pkg.name}</h3>
-                  <p className="text-white/70 text-sm mb-4">{pkg.subtitle}</p>
-                  <p className="text-xs text-white/50 mb-4">Ideal para: {pkg.ideal}</p>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white">{pkg.price}</div>
-                    <div className="text-sm text-white/60">{pkg.monthly}</div>
+          <div className="flex flex-col lg:flex-row justify-center items-center gap-6 max-w-7xl mx-auto">
+          {packages.map((pkg, index) => (
+              <div 
+                key={index} 
+                className={`w-full max-w-sm border border-muted rounded-xl p-6 flex flex-col items-center justify-center text-center h-full min-h-[600px] bg-[linear-gradient(to_bottom_left,rgb(140,69,255,0.1),black)] ${
+                  pkg.isRecommended 
+                    ? 'lg:scale-110 lg:z-10 relative border-[#8c44ff] shadow-lg shadow-[#8c44ff]/30' 
+                    : ''
+                }`}                
+              >
+                {pkg.isRecommended && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-[#8c44ff] text-white text-xs font-bold px-4 py-1 rounded-full">
+                      RECOMENDADO
+                    </span>
                   </div>
-                </div>
+                )}
                 
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-white mb-3">Impacto Garantizado:</h4>
-                  <ul className="space-y-2">
-                    {pkg.benefits.map((benefit, i) => (
-                      <li key={i} className="text-xs text-white/70 flex items-start">
-                        <span className="text-[#8c44ff] mr-2">✓</span>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="text-sm font-semibold text-white mb-3">Servicios Incluidos:</h4>
-                  <ul className="space-y-2">
-                    {pkg.services.map((service, i) => (
-                      <li key={i} className="text-xs text-white/60 flex items-start">
-                        <span className="text-white/40 mr-2">•</span>
-                        {service}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                                 <div className="text-center mb-4 flex-shrink-0">
+                   <h3 className={`font-bold text-white mb-2 ${pkg.isRecommended ? 'text-xl' : 'text-lg'}`}>
+                     {pkg.name}
+                   </h3>
+                   <p className="text-white/70 text-xs mb-3">{pkg.subtitle}</p>
+                   
+                   <div className="text-center mb-3">
+                     <div className={`font-bold text-white ${pkg.isRecommended ? 'text-2xl' : 'text-xl'}`}>
+                       {pkg.monthly}
+                     </div>
+                     <div className="text-xs text-white/60">
+                       Inversión única: {pkg.price}
+                     </div>
+                   </div>
+                   
+                 </div>
+                 
+                 <div className="mb-4 mt-8">
+                   <h4 className="text-xs font-semibold text-white mb-2 text-center">Impacto Garantizado:</h4>
+                   <ul className="space-y-1">
+                     {pkg.benefits.map((benefit, i) => (
+                       <li key={i} className="text-xs text-white/70 flex items-start justify-start text-left">
+                         <span className="text-[#8c44ff] mr-2 flex-shrink-0">✓</span>
+                         <span>{benefit}</span>
+                       </li>
+                     ))}
+                   </ul>
+                 </div>
+                 
+                 <div>
+                   <h4 className="text-xs font-semibold text-white mb-2 text-center">Servicios Incluidos:</h4>
+                   <ul className="space-y-1">
+                     {pkg.services.map((service, i) => (
+                       <li key={i} className="text-xs text-white/60 flex items-start justify-start text-left">
+                         <span className="text-white/40 mr-2 flex-shrink-0">•</span>
+                         <span>{service}</span>
+                       </li>
+                     ))}
+                   </ul>
+                 </div>
               </div>
             ))}
           </div>

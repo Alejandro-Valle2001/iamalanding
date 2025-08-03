@@ -35,7 +35,7 @@ export default function SiteHeader() {
             </nav>
           </section>
           <section className="flex max-md:gap-4 items-center">
-            <ActionButton label="Consulta Gratuita"/>
+            <ActionButton label="Consulta gratuita"/>
             <Drawer open={isOpen} onOpenChange={setIsOpen}>
               <DrawerTrigger>
                 <MenuIcon className="size-9 md:hidden hover:text-white/70 transition"/>

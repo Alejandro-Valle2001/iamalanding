@@ -62,7 +62,7 @@ export function CallToAction() {
           {/* Título principal */}
           <div className="text-center mb-12">
             <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter mb-6">
-              Comienza Hoy Mismo
+              Comienza hoy mismo
             </h2>
             <p className="text-white/90 text-lg md:text-xl font-medium mb-4">
               ¿Listo para transformar tu empresa? Agenda tu consulta gratuita y descubre cómo podemos digitalizar tu negocio en días, no meses.
@@ -76,7 +76,7 @@ export function CallToAction() {
             {/* Formulario de contacto */}
             <div className="border border-muted rounded-xl p-6 bg-[linear-gradient(to_bottom_left,rgb(140,69,255,0.1),black)]">
               <h3 className="text-2xl font-semibold text-white mb-6 text-center">
-                Solicita Tu Demo Gratuita
+                Solicita tu demo gratuita
               </h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -126,7 +126,7 @@ export function CallToAction() {
                     <option value="Starter Pack">Starter Pack - S/ 550</option>
                     <option value="Growth Pack">Growth Pack - S/ 1,295</option>
                     <option value="Premium Pack">Premium Pack - S/ 1,850</option>
-                    <option value="Servicios Adicionales">Servicios Adicionales</option>
+                    <option value="Servicios Adicionales">Servicios adicionales</option>
                     <option value="Consulta General">Consulta General</option>
                   </select>
                 </div>

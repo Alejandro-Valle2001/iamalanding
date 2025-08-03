@@ -1,5 +1,5 @@
 import {HeroSection} from "@/components/hero-section";
-import {LogoTicker} from "@/components/logo-ticker";
+// import {LogoTicker} from "@/components/logo-ticker";
 import {CallToAction} from "@/components/call-to-action";
 import {Features} from "@/components/features";
 import {Testimonials} from "@/components/testimonials";
@@ -12,10 +12,10 @@ export default function Home() {
     <>
       <SiteHeader />
       <HeroSection/>
-      <LogoTicker/>
+      {/* <LogoTicker/> */}
       <Features/>
       <WorkProcess/>
-      <Testimonials/>
+      {/* <Testimonials/> */}
       <FAQServices/>
       <CallToAction/>
     </>

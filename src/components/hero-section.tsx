@@ -74,13 +74,13 @@ export function HeroSection() {
         </h1>
         <div className="max-w-4xl mx-auto mt-36 md:mt-44 relative z-20">
           <h2 className="text-2xl md:text-3xl font-semibold text-white text-center mb-4">
-            Transformación Digital con IA
+            Transformación digital con IA
           </h2>
           <p className="text-lg md:text-xl text-white/90 text-center font-medium mb-6">
-          Llevamos tu negocio al mundo digital en menos de 8 días para que incrementes tus ventas desde el primer día y escales tu empresa.          </p>
+          Llevamos tu negocio al mundo digital en menos de 8 días para que incrementes tus ventas y escales tu empresa.          </p>
         </div>
         <div className="flex justify-center mt-8 relative z-20">
-          <ActionButton label="Consulta Gratuita"/>
+          <ActionButton label="Consulta gratuita"/>
         </div>
       </div>
     </motion.section>
