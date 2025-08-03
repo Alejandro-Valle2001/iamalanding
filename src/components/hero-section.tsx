@@ -36,9 +36,9 @@ export function HeroSection() {
       <Image 
         src="/llamaastro.png" 
         alt="Llama Astronauta" 
-        width={384}
-        height={384}
-        className="absolute size-64 md:size-96 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain z-10"
+        width={448}
+        height={448}
+        className="absolute size-72 md:size-[28rem] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain z-10"
       />
       {/* Rings + Mini planets Logic */}
       <motion.div
